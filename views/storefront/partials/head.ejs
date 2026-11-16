@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title><%= title %></title>
+<% if (locals.noindex) { %><meta name="robots" content="noindex,nofollow"><% } %>
+<meta name="description" content="<%= store.tagline || store.description || ('Shop at ' + store.name) %>">
+<meta property="og:site_name" content="<%= store.name %>"><meta property="og:title" content="<%= title %>"><meta property="og:type" content="website">
+<% if (locals.ogImage || store.logoUrl) { %><meta property="og:image" content="<%= locals.ogImage || store.logoUrl %>"><% } %>
+<meta name="theme-color" content="#14122B">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/storefront.css">
+<link rel="stylesheet" href="/css/logo.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+</head>
+<body data-slug="<%= store.slug %>" data-page="<%= page %>">
+<a class="skip" href="#main">Skip to content</a>

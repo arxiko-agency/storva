@@ -1,0 +1,16 @@
+</main>
+<footer class="sf-foot">
+  <div class="sf-wrap sf-foot-in">
+    <div>
+      <b><%= store.name %></b>
+      <% if (store.address) { %><div class="muted"><%= store.address %></div><% } %>
+      <% if (store.contactEmail) { %><div><a href="mailto:<%= store.contactEmail %>"><%= store.contactEmail %></a></div><% } %>
+      <% if (store.whatsappNumber) { %><div><a href="<%= waLink('Hi! I have a question about your store.') %>" target="_blank" rel="noopener">Chat on WhatsApp</a></div><% } %>
+    </div>
+    <a class="brand-logo badge sf-powered" href="/" aria-label="Powered by STORVA"><span class="logo-frame"><img src="/images/storva-logo.png" alt="STORVA" width="577" height="433" decoding="async" loading="lazy"></span></a>
+  </div>
+</footer>
+<div id="sf-toast" role="status" aria-live="polite"></div>
+<script src="/js/storefront.js"></script>
+</body>
+</html>
